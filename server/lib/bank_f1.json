@@ -1,0 +1,203 @@
+{
+  "_nota": "Banco Banorte-F1. 'ok' es el indice (base 0) de la respuesta correcta. Categorias: pilotos, equipos, circuitos, datos, tecnica.",
+  "questions": [
+    {
+      "category": "pilotos",
+      "text": "¿Quién es el piloto con más títulos de Campeonato Mundial de F1?",
+      "answers": ["Lewis Hamilton", "Michael Schumacher", "Sebastian Vettel", "Max Verstappen"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 15000,
+      "fact": "Hamilton suma 7 títulos, el mismo número que Schumacher. Vettel tiene 4 y Verstappen 2. Hamilton igualó el récord de Schumacher en 2021."
+    },
+    {
+      "category": "pilotos",
+      "text": "¿Con qué equipo debutó Fernando Alonso en la Fórmula 1?",
+      "answers": ["Renault", "Minardi", "McLaren", "Ferrari"],
+      "ok": 1,
+      "difficulty": 1,
+      "timeMs": 15000,
+      "fact": "Alonso debutó con Minardi en 2003 y consiguió su primera victoria en 2005, ya con Renault."
+    },
+    {
+      "category": "pilotos",
+      "text": "¿Cuántas victorias tiene Fernando Alonso en su carrera en F1?",
+      "answers": ["32", "34", "36", "38"],
+      "ok": 2,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "Alonso acumula 36 victorias, por detrás de Hamilton (105) y por delante de Vettel (53)."
+    },
+    {
+      "category": "pilotos",
+      "text": "¿Qué piloto es conocido por el apodo The Iceman y su carácter inalterable?",
+      "answers": ["Kimi Raikkonen", "Charles Leclerc", "Lando Norris", "George Russell"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 15000,
+      "fact": "Kimi Raikkonen fue campeón del mundo en 2007 con Ferrari, famoso por su estilo seco y su humor sin filtro."
+    },
+    {
+      "category": "equipos",
+      "text": "¿En qué equipo corren Fernando Alonso y Charles Leclerc?",
+      "answers": ["Ferrari", "Mercedes", "Red Bull", "McLaren"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "Ferrari es el único equipo que participa en todas las temporadas del campeonato desde que se creó en 1950."
+    },
+    {
+      "category": "equipos",
+      "text": "¿Qué equipo ganó títulos de constructores de forma consecutiva?",
+      "answers": ["Ferrari", "Williams", "Red Bull", "Lotus"],
+      "ok": 0,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "Ferrari ganó títulos de constructores entre 2000 y 2008 con la saga Schumacher, Massa y Raikkonen."
+    },
+    {
+      "category": "equipos",
+      "text": "¿En qué país se encuentra la base de Mercedes-AMG Petronas F1?",
+      "answers": ["Gran Bretaña", "Alemania", "Italia", "Mónaco"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "La base está en Brackley, Inglaterra. El circuito de Silverstone queda a pocos kilómetros."
+    },
+    {
+      "category": "equipos",
+      "text": "McLaren lleva el nombre de un piloto y fundador. ¿De qué nacionalidad era?",
+      "answers": ["Neozelandés", "Escocés", "Australiano", "Británico"],
+      "ok": 0,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "Bruce McLaren era neozelandés, campeón del mundo en 1961 y fundador de la escudería que lleva su nombre."
+    },
+    {
+      "category": "circuitos",
+      "text": "¿En qué circuito se celebra el Gran Premio de Mónaco?",
+      "answers": ["Circuit de Monaco", "Circuit Paul Ricard", "Autodromo Nazionale Monza", "Circuit de Barcelona-Catalunya"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "Es un circuito urbano de 3.34 km, uno de los más cortos del calendario y sin margen de error."
+    },
+    {
+      "category": "circuitos",
+      "text": "¿Cuál es el circuito más rápido del calendario de F1?",
+      "answers": ["Monza", "Spa-Francorchamps", "Silverstone", "Bahreín"],
+      "ok": 0,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "Monza, conocido como el Templo de la Velocidad, promedia unos 250 km/h de velocidad media."
+    },
+    {
+      "category": "circuitos",
+      "text": "¿En qué circuito se disputa el Gran Premio de Abu Dhabi?",
+      "answers": ["Yas Marina", "Dubái Autodrome", "Losail", "Jeddah Corniche"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "Yas Marina es uno de los circuitos artificiales más caros jamás construidos y cierra la temporada con una carrera nocturna."
+    },
+    {
+      "category": "circuitos",
+      "text": "¿En qué circuito hace Williams sus pruebas de desarrollo?",
+      "answers": ["Silverstone", "Hungaroring", "Jerez", "Suzuka"],
+      "ok": 1,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "Williams usa el Hungaroring por su configuración de alta carga aerodinámica, similar a Mónaco."
+    },
+    {
+      "category": "datos",
+      "text": "¿En qué año se disputó la primera temporada del Campeonato Mundial de F1?",
+      "answers": ["1946", "1950", "1954", "1958"],
+      "ok": 1,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "La primera temporada oficial fue en 1950 en Silverstone. Ese año solo se corrió el Gran Premio de Gran Bretaña."
+    },
+    {
+      "category": "datos",
+      "text": "¿Quién fue el primer campeón del mundo de Fórmula 1?",
+      "answers": ["Nino Farina", "Juan Manuel Fangio", "Alberto Ascari", "Mike Hawthorn"],
+      "ok": 0,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "Nino Farina ganó el primer campeonato en 1950, y lo hizo en la única carrera de esa temporada."
+    },
+    {
+      "category": "datos",
+      "text": "¿Cuántos pilotos han ganado un mundial con más de un equipo constructor distinto?",
+      "answers": ["9", "11", "13", "15"],
+      "ok": 2,
+      "difficulty": 3,
+      "timeMs": 18000,
+      "fact": "Son 13 los pilotos que han sido clientèle con dos o más escuderías, entre ellos Fangio, Ascari y Hakkinen."
+    },
+    {
+      "category": "datos",
+      "text": "¿Qué significan las siglas DRS en Fórmula 1?",
+      "answers": ["Sistema de Reducción de Resistencia", "Dirección de Recta", "Reducción de Ritmo", "Driver Recovery System"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "El DRS abre una aleróna móvil del difusor en zonas señalizadas, reduciendo la resistencia aerodinámica en las rectas."
+    },
+    {
+      "category": "datos",
+      "text": "¿Cuál es el récord de vueltas rápidas en una sola carrera de F1?",
+      "answers": ["58 vueltas", "66 vueltas", "75 vueltas", "103 vueltas"],
+      "ok": 1,
+      "difficulty": 3,
+      "timeMs": 18000,
+      "fact": "Alain Prost establece 66 vueltas rápidas en el GP de Mónaco de 2001, el récord absoluto del campeonato."
+    },
+    {
+      "category": "tecnica",
+      "text": "¿Qué sistema permite recuperar energía al frenar y liberarla bajo demanda?",
+      "answers": ["ERS", "DRS", "MGU-K", "KERS"],
+      "ok": 0,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "El ERS recuperaba hasta 2 MW en la era híbrida. El KERS fue su predecesor, popularizado en 2009."
+    },
+    {
+      "category": "tecnica",
+      "text": "¿Qué componente de titanio protege la cabeza del piloto?",
+      "answers": ["El Halo", "El T-wing", "El Diffuser", "La Barge board"],
+      "ok": 0,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "El Halo es un aro de titanio que se aprobó tras el accidente de Grosjean en 2020. En 2018 Alonso se apoyó en él en Zandvoort y evitó un golpe contra las pneumaticas."
+    },
+    {
+      "category": "tecnica",
+      "text": "En estrategia de carrera, ¿qué es hacer un undercut?",
+      "answers": ["Entrar a pits antes que el rival con neumáticos más viejos", "Entrar a pits después que el rival con neumáticos más viejos", "Bloquear la trazada del rival en la curva", "Esperar a que se cierre la ventana de parada"],
+      "ok": 0,
+      "difficulty": 3,
+      "timeMs": 18000,
+      "fact": "Undercut es ganar posiciones entrando antes con neumáticos más viejos; overcut es hacerlo después."
+    },
+    {
+      "category": "tecnica",
+      "text": "¿Quién recibe puntos en el campeonato?",
+      "answers": ["Todos los pilotos que terminan", "Los primeros 10", "La pole y los tres primeros del podio", "Solo el ganador"],
+      "ok": 2,
+      "difficulty": 1,
+      "timeMs": 12000,
+      "fact": "Solo la pole position y los tres primeros del podio suman puntos. El cuarto lugar se queda sin premio."
+    },
+    {
+      "category": "tecnica",
+      "text": "¿Qué motor monta un monoplaza actual de F1?",
+      "answers": ["Un V6 híbrido turbo de 1.6 litros", "Un V8 de 4.0 litros", "Un V6 aspirado de 3.0 litros", "Un V10 de 2.5 litros"],
+      "ok": 0,
+      "difficulty": 2,
+      "timeMs": 15000,
+      "fact": "El V6 híbrido de 1.6 litros supera los 1000 CV y es el motor de Formula 1 más potente de la historia."
+    }
+  ]
+}

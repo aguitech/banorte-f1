@@ -1,0 +1,31 @@
+# Runtime
+storage/*.sqlite
+storage/*.sqlite-wal
+storage/*.sqlite-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node (nunca se usa aquí, pero por si acaso)
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log

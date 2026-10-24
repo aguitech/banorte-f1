@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BANORTE-F1 · Pantalla Principal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+
+<div class="wash" id="wash"></div>
+<div class="sweep" id="sweep"></div>
+
+<div class="stage">
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brandline">
+      <span class="brand">Banorte</span>
+      <span class="series">F1 Challenge</span>
+    </div>
+    <div class="phase-chip" id="phaseChip" data-phase="idle">En espera</div>
+  </header>
+
+  <!-- Centre: one of lobby / intro / question / podium -->
+  <main class="main" id="main">
+    <div class="lobby" id="viewLobby">
+      <div class="lobby-logo">BANORTE<span class="f1">F1</span></div>
+      <div class="lobby-sub">Desafío de Conocimiento</div>
+      <div class="lobby-hint" id="lobbyHint">Esperando al presentador…</div>
+    </div>
+
+    <div class="intro-card hidden" id="viewIntro">
+      <div class="intro-kicker">Próxima pregunta</div>
+      <div class="intro-cat" id="introCat">F1</div>
+    </div>
+
+    <div class="question-card hidden" id="viewQuestion">
+      <div class="q-meta">
+        <span class="q-cat" id="qCat">pilotos</span>
+        <span class="q-num" id="qNum">PREGUNTA 01</span>
+      </div>
+      <h1 class="q-text" id="qText">—</h1>
+      <div class="answers" id="answers"></div>
+      <div id="revealExtras"></div>
+    </div>
+
+    <div class="podium hidden" id="viewPodium"></div>
+  </main>
+
+  <!-- Bottom bar: timer + live board -->
+  <footer class="bottombar">
+    <div class="timer" id="timer" data-urgent="0" style="opacity:0">
+      <div class="timer-ring" id="timerRing" style="--p:1">
+        <span class="timer-num" id="timerNum">0</span>
+      </div>
+    </div>
+    <div class="board" id="board"></div>
+    <span class="conn" id="conn" data-state="offline">conectando</span>
+  </footer>
+</div>
+
+<script type="module" src="assets/main.js?v=2"></script>
+</body>
+</html>

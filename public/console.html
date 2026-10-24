@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>BANORTE-F1 · Consola de Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/console.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ================= LEFT: show control ================= -->
+  <aside class="console">
+
+    <div class="panel">
+      <h2>
+        <span>Control del show</span>
+        <span class="conn" id="conn" data-state="offline">conectando</span>
+      </h2>
+
+      <div class="transport">
+        <button class="tbtn primary wide" data-act="next">
+          <span class="ico">▶</span> Siguiente pregunta
+        </button>
+        <button class="tbtn" data-act="prepare">
+          <span class="ico">◈</span> Preparar
+        </button>
+        <button class="tbtn" data-act="question">
+          <span class="ico">▶</span> Lanzar
+        </button>
+        <button class="tbtn go" data-act="reveal">
+          <span class="ico">✔</span> Revelar
+        </button>
+        <button class="tbtn warn" data-act="skip">
+          <span class="ico">⏱</span> Adelantar
+        </button>
+        <button class="tbtn ghost" data-act="podium">
+          <span class="ico">🏆</span> Podio
+        </button>
+        <button class="tbtn danger wide" data-act="reset">
+          <span class="ico">⟲</span> Reiniciar scores
+        </button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2><span>Temporizador</span></h2>
+      <div class="mini-timer" id="miniTimer" data-urgent="0">
+        <span id="miniTime">—</span>
+        <span class="bar"><i id="miniBar" style="width:100%"></i></span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2><span>En vivo</span></h2>
+      <div class="preview" id="preview">
+        <div class="pv-cat" id="pvCat">—</div>
+        <div class="pv-text" id="pvText">Sin pregunta activa</div>
+        <div class="pv-answers" id="pvAnswers"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2><span>Jugadores</span></h2>
+      <div class="roster" id="roster"></div>
+    </div>
+
+    <div class="panel">
+      <h2><span>Última ronda</span></h2>
+      <table class="tally-tbl" id="tally">
+        <thead><tr><th>Pad</th><th>Ms</th><th>Δ pts</th><th>Total</th></tr></thead>
+        <tbody id="tallyBody">
+          <tr><td colspan="4" style="color:var(--ink-mute)">Sin datos aún</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </aside>
+
+  <!-- ================= RIGHT: pads + touch ================= -->
+  <section class="pads-zone">
+    <div class="pads-head">
+      <div>
+        <h1>BANORTE<span style="color:var(--red)">F1</span> · Consola táctil</h1>
+        <div class="sub">Toca un pad para responder</div>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="pads">Pads</button>
+        <button class="tab" data-tab="bank">Banco</button>
+      </div>
+    </div>
+
+    <!-- PAD VIEW -->
+    <div id="tabPads" class="tabpane">
+      <div class="pads-q idle" id="padsQ">
+        <span class="cat" id="padsCat">—</span>
+        <span class="txt" id="padsText">Esperando al presentador…</span>
+      </div>
+
+      <div class="pads" id="pads"></div>
+
+      <div class="touchbar" id="touchbar">
+        <button class="touch-key" data-answer="0">A<span class="hint">Respuesta A</span></button>
+        <button class="touch-key" data-answer="1">B<span class="hint">Respuesta B</span></button>
+        <button class="touch-key" data-answer="2">C<span class="hint">Respuesta C</span></button>
+        <button class="touch-key" data-answer="3">D<span class="hint">Respuesta D</span></button>
+      </div>
+    </div>
+
+    <!-- BANK VIEW -->
+    <div id="tabBank" class="tabpane hidden" style="min-height:0">
+      <div class="bank">
+        <div class="bank-list" id="bankList"></div>
+        <form class="bank-form" id="bankForm">
+          <input type="text" name="text" placeholder="Texto de la pregunta" required>
+          <div class="ans-edit" id="ansEdit"></div>
+          <input type="text" name="fact" placeholder="Dato curioso (se muestra al revelar)">
+          <div style="display:flex;gap:8px">
+            <select name="category" id="bankCat" style="flex:1"></select>
+            <select name="difficulty" style="flex:0 0 90px">
+              <option value="1">Fácil</option>
+              <option value="2">Media</option>
+              <option value="3">Difícil</option>
+            </select>
+            <button type="submit" class="tbtn primary" style="flex:0 0 96px;padding:9px">
+              Guardar
+            </button>
+          </div>
+          <button type="button" class="tbtn ghost" id="bankCancel" style="padding:8px;font-size:11px">
+            Limpiar formulario
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="assets/console.js?v=2"></script>
+</body>
+</html>

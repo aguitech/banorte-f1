@@ -1,0 +1,161 @@
+/* ============================================================
+   BANORTE-F1 · shared tokens + primitives
+   AGUITECH — Ingeniería + Diseño + Sistemas
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --red:      #e2231a;
+  --red-deep: #a8140e;
+  --navy:     #04081c;
+  --navy-2:   #0a1330;
+  --cyan:     #00f3ff;
+  --cyan-2:   #0084ff;
+  --gold:     #ffc400;
+  --green:    #00e676;
+
+  --ink:      #ffffff;
+  --ink-dim:  #9fb0d0;
+  --ink-mute: #62739a;
+
+  /* Semantic */
+  --ok:       #00e676;
+  --ok-deep:  #00a152;
+  --bad:      #ff3b5c;
+  --bad-deep: #b3152f;
+
+  /* Layout */
+  --radius:   18px;
+  --radius-s: 10px;
+  --gap:      clamp(12px, 1.4vw, 26px);
+  --pad:      clamp(16px, 2vw, 44px);
+
+  --font:     "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:     "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
+
+  --ease:     cubic-bezier(.22, 1, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--navy);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+}
+
+body {
+  /* Kiosk mode: never rubber-band, never text-select on a touch console. */
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; border: none; background: none; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,.03); }
+::-webkit-scrollbar-thumb {
+  background: rgba(0,243,255,.22);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0,243,255,.4); }
+
+/* ---- Brand mark -------------------------------------------------- */
+.aguitech-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.aguitech-mark::before {
+  content: "";
+  width: 9px; height: 9px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--cyan), var(--cyan-2));
+  box-shadow: 0 0 10px rgba(0,243,255,.7);
+}
+
+/* ---- Connection pill --------------------------------------------- */
+.conn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.03);
+  color: var(--ink-mute);
+  transition: all .3s var(--ease);
+}
+.conn::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--ink-mute);
+}
+.conn[data-state="online"] {
+  color: var(--ok);
+  border-color: rgba(0,230,118,.35);
+  background: rgba(0,230,118,.08);
+}
+.conn[data-state="online"]::before {
+  background: var(--ok);
+  box-shadow: 0 0 10px var(--ok);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+.conn[data-state="offline"] {
+  color: var(--bad);
+  border-color: rgba(255,59,92,.35);
+  background: rgba(255,59,92,.08);
+}
+.conn[data-state="offline"]::before { background: var(--bad); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%      { opacity: .35; transform: scale(1.5); }
+}
+
+/* ---- Utility ----------------------------------------------------- */
+.hidden { display: none !important; }
+
+.mono { font-family: var(--mono); }
+
+.tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
